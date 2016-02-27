@@ -1,0 +1,25 @@
+{
+  "name": "eslint-plugin-ember-cli-tbd",
+  "version": "0.0.0",
+  "description": "ember-cli-tbd",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "Mitch Lloyd",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests/lib/rules"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "~2.2.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "ISC"
+}
