@@ -23,5 +23,8 @@ ruleTester.run("disallow-function-prototype-extension", rule, {
   }, {
     code: "(function() {}.observesBefore('key'))",
     errors: ["Avoid using function prototype extensions like 'observesBefore'. Also, using before observers is deprecated."]
+  }, {
+    code: "computed(function() {}).property()",
+    errors: ["Avoid using function prototype extensions like 'property'. Use the computed('dependentKey', function() {}) syntax instead."]
   }]
 });
