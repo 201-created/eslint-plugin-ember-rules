@@ -7,7 +7,7 @@ var ruleTester = new RuleTester();
 
 var errors = ["Property on the Ember namespace was accessed directly."];
 
-ruleTester.run("rule-id-tbd", rule, {
+ruleTester.run("accessing-ember-namespace", rule, {
   valid: [{
     code: "Ember"
   }, {
