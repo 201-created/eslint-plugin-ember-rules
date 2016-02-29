@@ -35,7 +35,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "ember-cli-rules/accessing-ember-namespace": 2
+        "ember-rules/accessing-ember-namespace": 2
     }
 }
 ```
