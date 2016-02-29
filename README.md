@@ -45,3 +45,14 @@ Then configure the rules you want to use under the rules section.
 * `accessing-ember-namespace` - Ensure that properties from the `Ember` namespace
   are assigned to variables before they are used.
 
+* `disallow-function-prototype-extension` - Prevent the use of Ember's methods
+  `property`, `observes`, and `observesBefore` which are added to the function
+  prototype. A common example of a violation would be this deprecated syntax:
+
+  ```javascript
+  Ember.object.extend({
+    name: function() {
+      return this.get('firstName') + this.get('lastName');
+    }.property('firstName', 'lastName')
+  })
+  ```
