@@ -1,7 +1,7 @@
 {
-  "name": "eslint-plugin-ember-cli-tbd",
+  "name": "eslint-plugin-ember-rules",
   "version": "0.0.0",
-  "description": "ember-cli-tbd",
+  "description": "A set of ESLint rules for Ember applications",
   "keywords": [
     "eslint",
     "eslintplugin",
@@ -10,7 +10,7 @@
   "author": "Mitch Lloyd",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests/lib/rules"
+    "test": "eslint ./ && mocha tests/**/*.js"
   },
   "dependencies": {
     "requireindex": "~1.1.0"
