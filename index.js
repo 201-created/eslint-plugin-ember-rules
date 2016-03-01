@@ -2,7 +2,7 @@
 
 module.exports = {
   rules: {
-    'accessing-ember-namespace': require('./lib/rules/accessing-ember-namespace'),
-    'disallow-function-prototype-extension': require('./lib/rules/disallow-function-prototype-extension')
+    'destructure-ember-namespace': require('./lib/rules/destructure-ember-namespace'),
+    'no-function-prototype-extension-calls': require('./lib/rules/no-function-prototype-extension-calls')
   }
 };

@@ -1,11 +1,11 @@
 "use strict";
 
-var rule = require("../../../lib/rules/disallow-function-prototype-extension");
+var rule = require("../../../lib/rules/no-function-prototype-extension-calls");
 var RuleTester = require("eslint").RuleTester;
 
 var ruleTester = new RuleTester();
 
-ruleTester.run("disallow-function-prototype-extension", rule, {
+ruleTester.run("no-function-prototype-extension-calls", rule, {
   valid: [{
     code: "observer('key', function() {})"
   }, {
