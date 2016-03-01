@@ -2,6 +2,8 @@
 
 A set of ESLint rules for Ember applications.
 
+[![Build Status](https://travis-ci.org/201-created/eslint-plugin-ember-rules.svg?branch=master)](https://travis-ci.org/201-created/eslint-plugin-ember-rules)
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
