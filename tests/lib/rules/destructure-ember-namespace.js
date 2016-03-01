@@ -1,11 +1,11 @@
 "use strict";
 
-var rule = require("../../../lib/rules/destructure-ember-namespace");
+var destructureEmberNamespace = require("../../../lib/rules/destructure-ember-namespace");
+var rule = destructureEmberNamespace.rule;
+var errors = [destructureEmberNamespace.message];
+
 var RuleTester = require("eslint").RuleTester;
-
 var ruleTester = new RuleTester();
-
-var errors = ["Property on the Ember namespace was accessed directly."];
 
 ruleTester.run("destructure-ember-namespace", rule, {
   valid: [{

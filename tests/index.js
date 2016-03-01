@@ -18,10 +18,7 @@ var rules = fs.readdirSync(path.resolve(__dirname, '../lib/rules/'))
 describe('all rule files should be exported by the plugin', function() {
   rules.forEach(function(ruleName) {
     it('should export ' + ruleName, function() {
-      assert.equal(
-        plugin.rules[ruleName],
-        require(path.join('../lib/rules', ruleName))
-      );
+      assert.ok(typeof plugin.rules[ruleName] === 'function', 'exported a function for ' + ruleName);
     });
   });
 });
