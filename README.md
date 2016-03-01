@@ -35,13 +35,24 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "ember-rules/accessing-ember-namespace": 2
+        "ember-rules/destructure-ember-namespace": 2
     }
 }
 ```
 
 ## Supported Rules
 
-* `accessing-ember-namespace` - Ensure that properties from the `Ember` namespace
+* `destructure-ember-namespace` - Ensure that properties from the `Ember` namespace
   are assigned to variables before they are used.
 
+* `no-function-prototype-extension-calls` - Prevent the use of Ember's methods
+  `property`, `observes`, and `observesBefore` which are added to the function
+  prototype. A common example of a violation would be this deprecated syntax:
+
+  ```javascript
+  Ember.Object.extend({
+    name: function() {
+      return this.get('firstName') + this.get('lastName');
+    }.property('firstName', 'lastName')
+  })
+  ```
