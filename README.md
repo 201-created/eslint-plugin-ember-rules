@@ -37,15 +37,15 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "ember-rules/destructure-ember-namespace": 2
+        "ember-rules/destructure-namespaces": [2, ["Ember", "DS"]]
     }
 }
 ```
 
 ## Supported Rules
 
-* `destructure-ember-namespace` - Ensure that properties from the `Ember` namespace
-  are assigned to variables before they are used.
+* `destructure-namespaces` - Ensure that properties from the configured
+  namespaces are assigned to variables before they are used.
 
 * `no-function-prototype-extension-calls` - Prevent the use of Ember's methods
   `property`, `observes`, and `observesBefore` which are added to the function
