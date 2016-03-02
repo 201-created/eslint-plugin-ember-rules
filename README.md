@@ -58,3 +58,11 @@ Then configure the rules you want to use under the rules section.
     }.property('firstName', 'lastName')
   })
   ```
+
+* `no-class-prototype-attributes` - For certain Ember objects, some properties
+  must be set on the prototype when extending a factory (`classNames`,
+  `actions`). However when setting default properties for an object, in most
+  cases one should use the `init` hook. This is especially important when
+  setting values to objects or arrays that will be shared (likely inadvertently)
+  across instances.  This rule warns when properties are set on the prototype
+  that should instead be initialized inside of the `init` hook.
