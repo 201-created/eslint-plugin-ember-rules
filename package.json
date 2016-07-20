@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-ember-rules",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A set of ESLint rules for Ember applications",
   "keywords": [
     "eslint",
