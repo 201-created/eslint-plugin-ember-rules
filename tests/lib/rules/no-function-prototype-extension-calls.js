@@ -11,7 +11,13 @@ ruleTester.run("no-function-prototype-extension-calls", rule, {
   }, {
     code: "computed(function() {}).volatile()"
   }, {
-    code: "(function() {}).bind(this)"
+    code: "(function() {}.bind(this))"
+  }, {
+    code: "obj.method().on('arg')"
+  }, {
+    code: "func().on()"
+  }, {
+    code: "computed(function() {}).property()"
   }],
 
   invalid: [{
@@ -28,9 +34,6 @@ ruleTester.run("no-function-prototype-extension-calls", rule, {
     errors: ["Avoid using function prototype extensions like 'on'. Use the on('event', function() {}) syntax instead."]
   }, {
     code: "(function() {}.property())",
-    errors: ["Avoid using function prototype extensions like 'property'. Use the computed('dependentKey', function() {}) syntax instead."]
-  }, {
-    code: "computed(function() {}).property()",
     errors: ["Avoid using function prototype extensions like 'property'. Use the computed('dependentKey', function() {}) syntax instead."]
   }]
 });
